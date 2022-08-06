@@ -5,7 +5,6 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
 import {UsersIcon, GlobeAltIcon, UserCircleIcon, SearchIcon, MenuIcon} from '@heroicons/react/solid'
 import {useRouter} from "next/router"
-// import {SearchIcon} from '@heroicons/react'
 export default function Header({placeholder}) {
   const [searchInput, setSearchInput] = useState("")
   const [startDate, setStartDate] = useState(new Date());
