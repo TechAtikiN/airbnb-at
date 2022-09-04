@@ -15,18 +15,18 @@
 * Fully Responsive
 
 ## Home Screen
-![ALT](../utils/images/landingpage1.png)
-![ALT](../utils/images/landingpage2.png)
-![ALT](../utils/images/landingpage3.png)
-![ALT](../utils/images/footer.png)
+![ALT](./images/landingpage1.png)
+![ALT](./images/landingpage2.png)
+![ALT](./images/landingpage3.png)
+![ALT](./images/footer.png)
 
 ## Calendar
-![ALT](../utils/images/calendar.png)
+![ALT](./images/calendar.png)
 
 
 ## Search page
-![ALT](../utils/images/searchpage.png)
+![ALT](./images/searchpage.png)
 
 
 ## Map
-![ALT](../utils/images/Map.png)
+![ALT](./images/Map.png)
