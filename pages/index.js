@@ -18,7 +18,7 @@ export default function Home({exploreData, cardsData}) {
 
     <div className=''>
       <Head>
-        <title>Airbnb</title>
+        <title>AirbnbAt</title>
       </Head>
       {/**Header */}
       <Header/>
