@@ -11,8 +11,8 @@ import SmallCard from '../components/SmallCard';
 //>>server side rendering--> when you have data that is changing frequentlyy use ssr eg news
 
 
-export default function Home({exploreData, cardsData}) {
-  
+export default function Home({ exploreData, cardsData }) {
+
   return (
 
 
@@ -21,60 +21,60 @@ export default function Home({exploreData, cardsData}) {
         <title>AirbnbAt</title>
       </Head>
       {/**Header */}
-      <Header/>
+      <Header />
       {/**Banner */}
-      <Banner/>
+      <Banner />
       <main className='max-w-7xl mx-auto px-8 sm:16px'>
         <section className='pt-6'>
           <h2 className='text-4xl font-semibold pb-5'>Explore Nearby</h2>
 
           {/* Pull some data from the server - API Endpoints */}
           <div className='grid grid-col-1 sm:grid-cols-2 ls:grid-cols-3 xl:grid-cols-4'>
-            {exploreData?.map(({img, distance, location}) => (
-            <SmallCard
-              key={img}
-              img={img}
-              distance={distance}
-              location={location} />
-          ))}
+            {exploreData?.map(({ img, distance, location }) => (
+              <SmallCard
+                key={img}
+                img={img}
+                distance={distance}
+                location={location} />
+            ))}
           </div>
         </section>
 
         <section>
           <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2>
           <div className='flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3'>
-              {cardsData?.map(item => (
-            <MediumCard
-              key={item.img}
-              img={item.img}
-              title={item.title} />
-          ))}
+            {cardsData?.map(item => (
+              <MediumCard
+                key={item.img}
+                img={item.img}
+                title={item.title} />
+            ))}
           </div>
-          
+
         </section>
 
         <LargeCard
-          img="https://links.papareact.com/4cj"
+          img="http://links.papareact.com/4cj"
           title="The Greatest Outdoors"
           description="Wishlists curatedd by Airbnb"
           buttonText="Get Inspired"
         />
       </main>
-        <Footer/>
+      <Footer />
     </div>
   )
 }
 
 export async function getStaticProps() { // this only works in pages
   //this tells nextjs that this is gonna do some clever nextjs renderiing stuuf
-  const exploreData = await fetch('https://links.papareact.com/pyp')
-    .then(res => res.json()); 
+  const exploreData = await fetch('https://www.jsonkeeper.com/b/4G1G')
+    .then(res => res.json());
   //anuthing inside getStaticProps getsServerSideprops happens on the server
   //so we need to return it to th functional component at the top
 
-  const cardsData = await fetch('https://links.papareact.com/zp1')
-    .then((res) => 
-    res.json())
+  const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT')
+    .then((res) =>
+      res.json())
 
   return {
     props: {
@@ -83,5 +83,5 @@ export async function getStaticProps() { // this only works in pages
     }
   }
 
-  
+
 }
